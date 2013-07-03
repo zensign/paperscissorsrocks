@@ -1,6 +1,6 @@
 PAPER, SCISSORS, ROCKS - Command Line Edition
 
-Wrote this nodejs application for fun and learnign purposes. As is, runs on localhost. Configure the server to listem on an IP and port as you see fit.
+Wrote this nodejs application for fun and learning purposes. As is, runs on localhost. Configure the server to listen on an IP and port as you see fit.
 
 Clients can connect like so:
 
