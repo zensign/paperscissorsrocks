@@ -19,8 +19,6 @@ net.createServer(function(socket)
 	{
 		if(me.match != undefined)
 		{
-			console.log('ended while in match');
-
 			var match = matches[me.match];
 			var pr = match.player1 == me ? match.player2 : match.player1;	
 			
@@ -29,9 +27,6 @@ net.createServer(function(socket)
 			pr.socket.write(me.name+' has quit the match. You win by forfiet! Play again? y/n \n');
 			matches.splice(me.match, 1);	
 		}
-		
-		console.log(me.match);
-		console.log('ended');
 		
 		var i = clients.indexOf(me.socket);
 		clients.splice(i, 1);
