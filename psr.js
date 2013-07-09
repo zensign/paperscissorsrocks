@@ -31,7 +31,7 @@ net.createServer(function(socket)
 		var i = clients.indexOf(me.socket);
 		clients.splice(i, 1);
 	});
-}).listen(8000, '127.0.0.1');
+}).listen(8000);
 
 function parseData(data, me)
 {
@@ -44,7 +44,7 @@ function parseData(data, me)
 		me.name = command;
 		me.socket.write('Welcome, '+me.name+'\n');
 
-		setTimeout(function(){me.socket.write(clients.length+' players online. Type "find" to start a new match. Type "quit" at anytime to disconnect. \n')}, 1000);
+		setTimeout(function(){me.socket.write((clients.length-1)+' players online. Type "find" to start a new match. Type "quit" at anytime to disconnect. \n')}, 1000);
 	}
 	else if(command.indexOf('quit') >= 0 || (command == 'n' && me.status == 0))
 	{	
